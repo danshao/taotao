@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="js/magicseaweed.js"></script>
+</head>
+
+<body onload=auto()>
+	<script type="text/javascript">
+        var bg = getTT();
+        var ImgNum = 0;
+        var ImgLength = bg.length - 1;
+        var delay = 500;
+        var lock = false;
+        var run;
+
+        function chgImg(direction) {
+            if (document.images) {
+                ImgNum = ImgNum + direction;
+                if (ImgNum > ImgLength) {  ImgNum = 0; }
+                if (ImgNum < 0) { ImgNum = ImgLength; }
+                document.slideshow.src = bg[ImgNum]; 
+            }
+        }
+
+        function auto() {
+            if (lock == true) {
+                lock = false;
+                window.clearInterval(run);
+            }
+            else if (lock == false) {
+                lock = true;
+                run = setInterval("chgImg(1)", delay);
+            }
+        }
+    </script>
+    <div class="control-charttypes">
+        <ul>
+            <li>
+                <a>Swell</a>
+            </li>
+            <li>
+                <a>Period</a>
+            </li>
+            <li>
+                <a>Tide</a>
+            </li>
+            <li>
+                <a>Wind</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="anim">
+        <img src="images/loading.png" name="slideshow">
+        <br>
+        <a href="javascript:chgImg(-1)">Previous</a> &nbsp;|&nbsp;
+        <a href="javascript:auto()">Auto/Stop</a> &nbsp;|&nbsp; 
+        <a href="javascript:chgImg(1)">Next</a></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+#container {
+    width: 1000px;
+    margin: 50px auto 25px auto;
+    position: relative;
+    height: 87px;
+}
+#center {
+    font-family: Helvetica, Arial;
+    font-size: 11px; 
+    background-color: #FAFAFA; 
+    color: #63665F;
+    width: 800px;
+    margin: 25px auto;
+    position: relative;
+}
+#top_bar {
+    position: relative;
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bottom_bar {
+    position: relative;
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo {
+    background: #fff;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    float: left;
+    left: 0;
+    bottom: 0;
+    width: 205px;
+    height: 69px;
+}
+#fb {
+    background: #ff;
+    position: absolute;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    float: right;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+}
+#nav {
+    background: #fff;
+    display: block;
+    float: right;
+    list-style: none;
+    position: absolute;
+    background:url('images/nav.png') no-repeat;
+    width: 514px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    right: 100px;
+}
+
+.control-charttypes {
+    float: left;
+    font-family: Helvetica, Arial, Lucida, sans-serif;
+/*  display: block;
+    margin-left: 10px; */
+}
+
+.control-charttypes ul {
+    margin: 0;
+}
+
+.control-charttypes li {
+    display: inline;
+    float: left;
+    list-style-type: none;
+}
+
+.control-charttypes a {
+    display: inline;
+    padding: 5px 6px 5px 6px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    border-width: 1px;
+    border-style: solid;
+    background-repeat: repeat-x;
+}
+#nav-wavecheck {
+    left: 328px;
+    width: 93px;
+    background:url('images/nav.png') -184px 0px;
+}
+
+#search {
+    background: #fff;
+    float: right;
+    position: absolute;
+    background:url('images/search.png') no-repeat;
+    width: 156px;
+    height: 33px;
+    margin: 0;
+    padding:; 0px 0px 18px 0px;
+    top: 0;
+    right: 0;
+} 
+#anim {
+    width: 750px; height: 460px;
+    /* background-image: url(http://chart-a.metcentral.com/wave/750/61-1339632000-HTSGW.png);
+    background-image: url(http://mail.google.com/mail/im/emotisprites/wink2.png); */
+    background-repeat: no-repeat; 
+}

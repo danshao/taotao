@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="js/orbit-1.2.3.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+    		$('#featured').orbit({
+                animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+                animationSpeed: 800,                // how fast animtions are
+                timer: false,                        // true or false to have the timer
+                advanceSpeed: 3000, 		        // if timer is enabled, time between transitions 
+                pauseOnHover: false, 		        // if you hover pauses the slider
+                startClockOnMouseOut: false, 	    // if clock should start on MouseOut
+                startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
+                directionalNav: false, 		        // manual advancing directional navs
+                captions: true, 			        // do you want captions?
+                captionAnimation: 'fade', 		    // fade, slideOpen, none
+                captionAnimationSpeed: 800, 	    // if so how quickly should they animate in
+                bullets: true,			            // true or false to activate the bullet navigation
+                bulletThumbs: false,		        // thumbnails for the bullets
+                bulletThumbLocation: '',		    // location from this file where thumbs will be
+                afterSlideChange: function(){} 	    // empty function 
+            });
+    	});
+    </script>
+</head>
+
+<body>
+    <div id="container">
+            <img id="logo" src="images/logo.png">
+            <div id="search"></div>
+            <ul id="nav">
+                <li id="home"><a href="#"></a></li>
+                <li id="about"><a href="#"></a></li>
+                <li id="wavecheck"><a id="nav-wavecheck" href="wavecheck.htm"></a></li>
+            </ul>
+            <img id="fb" src="images/fb.png">
+
+    </div>
+    <img id="top_bar" src="images/topbar.png">
+    <div id="center">
+        <div id="featured">
+            <img src="pics/sunsetsexy.jpg" alt="">
+            <img src="pics/surfgirlass.jpg" alt="">
+            <img src="pics/bodyboard.jpg" alt="">
+        </div>
+    </div>
+    <img id="bottom_bar" src="images/bottombar.png">
+</body>
+</html>
