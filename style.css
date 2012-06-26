@@ -6,6 +6,7 @@
     position: relative;
     height: 87px;
 }
+
 #center {
     font-family: Helvetica, Arial;
     font-size: 11px; 
@@ -15,6 +16,7 @@
     margin: 25px auto;
     position: relative;
 }
+
 #top_bar {
     position: relative;
     width: 1000px;
@@ -22,6 +24,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 #bottom_bar {
     position: relative;
     width: 1000px;
@@ -29,6 +32,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 #logo {
     background: #fff;
     position: absolute;
@@ -40,6 +44,7 @@
     width: 205px;
     height: 69px;
 }
+
 #fb {
     background: #ff;
     position: absolute;
@@ -51,6 +56,7 @@
     width: 30px;
     height: 30px;
 }
+
 #nav {
     background: #fff;
     display: block;
@@ -99,12 +105,56 @@
     border-style: solid;
     background-repeat: repeat-x;
 }
+
+.chart-key {
+    background:url("images/chartkey.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 27px;
+    margin-left: 50px;
+    /* text-indent: -9999px; */
+    width: 760px;
+    background-position: 0 0;
+    margin-top: 10px;
+}
+
+.chart-key.msw-c-scale-TMP{
+    background-position:0 0
+}
+
+.chart-key.msw-c-scale-HTSGW{
+    background-position:0 -27px
+}
+
+.chart-key.msw-c-scale-PERPW{
+    background-position:0 -54px
+}
+
+.chart-key.msw-c-scale-WMAG{
+    background-position:0 -81px
+}
+
+.chart-key.msw-c-scale-PRATE{
+    background-position:0 -108px
+}
+
+.chart-key.msw-c-scale-SURF,.msw-c-keywrapper.msw-c-scale-HTSGW.msw-c-newscale{
+    background-position:0 -135px
+}
+
+.chart-key.msw-c-scale-JETSTREAM{
+    background-position:0 -162px
+}
+
 #nav-wavecheck {
     left: 328px;
     width: 93px;
     background:url('images/nav.png') -184px 0px;
 }
 
+#waveDate {
+    font-family: Helvetica, Arial, Lucida, sans-serif;
+    font-size: 0.8em;
+}
 #search {
     background: #fff;
     float: right;
@@ -116,7 +166,8 @@
     padding:; 0px 0px 18px 0px;
     top: 0;
     right: 0;
-} 
+}
+
 #anim {
     width: 750px; height: 460px;
     /* background-image: url(http://chart-a.metcentral.com/wave/750/61-1339632000-HTSGW.png);

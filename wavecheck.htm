@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="js/magicseaweed.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 
 <body onload=auto()>
@@ -19,7 +20,8 @@
                 ImgNum = ImgNum + direction;
                 if (ImgNum > ImgLength) {  ImgNum = 0; }
                 if (ImgNum < 0) { ImgNum = ImgLength; }
-                document.slideshow.src = bg[ImgNum]; 
+                document.slideshow.src = bg[ImgNum].swellImage; 
+                $("div#waveDate").text(bg[ImgNum].date);
             }
         }
 
@@ -34,7 +36,7 @@
             }
         }
     </script>
-    <div class="control-charttypes">
+    <div class = "control-charttypes">
         <ul>
             <li>
                 <a>Swell</a>
@@ -51,12 +53,16 @@
         </ul>
     </div>
 
-    <div id="anim">
-        <img src="images/loading.png" name="slideshow">
+    <div id = "anim">
+        <img src = "images/loading.png" name="slideshow">
+        <div id = "waveDate"></div>
         <br>
-        <a href="javascript:chgImg(-1)">Previous</a> &nbsp;|&nbsp;
-        <a href="javascript:auto()">Auto/Stop</a> &nbsp;|&nbsp; 
-        <a href="javascript:chgImg(1)">Next</a></div>
+        <div class = "chart-key"></div>
+        <!--
+        <a href = "javascript:chgImg(-1)">Previous</a> &nbsp;|&nbsp;
+        <a href = "javascript:auto()">Auto/Stop</a> &nbsp;|&nbsp; 
+        <a href = "javascript:chgImg(1)">Next</a>
+        -->
     </div>
 </body>
 </html>
