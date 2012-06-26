@@ -117,31 +117,31 @@
     margin-top: 10px;
 }
 
-.chart-key.msw-c-scale-TMP{
+.chart-key.c-scale-TMP{
     background-position:0 0
 }
 
-.chart-key.msw-c-scale-HTSGW{
+.chart-key.c-scale-HTSGW{
     background-position:0 -27px
 }
 
-.chart-key.msw-c-scale-PERPW{
+.chart-key.c-scale-PERPW{
     background-position:0 -54px
 }
 
-.chart-key.msw-c-scale-WMAG{
+.chart-key.c-scale-WMAG{
     background-position:0 -81px
 }
 
-.chart-key.msw-c-scale-PRATE{
+.chart-key.c-scale-PRATE{
     background-position:0 -108px
 }
 
-.chart-key.msw-c-scale-SURF,.msw-c-keywrapper.msw-c-scale-HTSGW.msw-c-newscale{
+.chart-key.c-scale-SURF,.c-keywrapper.c-scale-HTSGW.c-newscale{
     background-position:0 -135px
 }
 
-.chart-key.msw-c-scale-JETSTREAM{
+.chart-key.c-scale-JETSTREAM{
     background-position:0 -162px
 }
 
