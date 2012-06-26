@@ -9,23 +9,23 @@
 <body onload=auto()>
 	<script type="text/javascript">
         var bg = getTT();
-        var ImgNum = 0;
-        var ImgLength = bg.length - 1;
+        var imgNum = 0;
+        var imgLength = bg.length - 1;
         var delay = 500;
         var lock = false;
         var run;
 
         function chgImg(direction) {
             // if (document.images) {
-                ImgNum = ImgNum + direction;
-                if (ImgNum > ImgLength) {
-                    ImgNum = 0; 
+                imgNum = imgNum + direction;
+                if (imgNum > imgLength) {
+                    imgNum = 0; 
                 }
-                if (ImgNum < 0) { 
-                    ImgNum = ImgLength; 
+                if (imgNum < 0) { 
+                    imgNum = imgLength; 
                 }
-                $("#slideshow").attr("src", bg[ImgNum].swellImage); 
-                $("div#waveDate").text(bg[ImgNum].date);
+                $("#slideshow").attr("src", bg[imgNum].swellImage); 
+                $("div#waveDate").text(bg[imgNum].date);
             // }
         }
 
