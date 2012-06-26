@@ -57,11 +57,9 @@
     height: 30px;
 }
 
-#nav {
+.nav {
     background: #fff;
     display: block;
-    float: right;
-    list-style: none;
     position: absolute;
     background:url('images/nav.png') no-repeat;
     width: 514px;
@@ -70,6 +68,25 @@
     padding: 0;
     bottom: 0;
     right: 100px;
+}
+
+.nav li {
+    float: left;
+    list-style: none;
+}
+
+.nav span {
+    display: none;
+}
+
+.nav a {
+    height: 34px;
+    display: block;
+}
+
+.nav.wavecheck {
+    width: 91px;
+    background:url('images/nav.png') -331px 0px no-repeat;
 }
 
 .control-charttypes {
@@ -143,12 +160,6 @@
 
 .chart-key.c-scale-JETSTREAM{
     background-position:0 -162px
-}
-
-#nav-wavecheck {
-    left: 328px;
-    width: 93px;
-    background:url('images/nav.png') -184px 0px;
 }
 
 #waveDate {
