@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="expires" content="-1">
+    <title>Tao Tao 滔滔</title>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="js/magicseaweed.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-</head>
-
-<body onload=auto()>
-	<script type="text/javascript">
+    <script type="text/javascript">
         var bg = getTT();
         var imgNum = 0;
         var imgLength = bg.length - 1;
@@ -39,34 +40,69 @@
                 run = setInterval("chgImg(1)", delay);
             }
         }
-    </script>
-    <div class = "control-charttypes">
-        <ul>
-            <li>
-                <a>Swell</a>
-            </li>
-            <li>
-                <a>Period</a>
-            </li>
-            <li>
-                <a>Tide</a>
-            </li>
-            <li>
-                <a>Wind</a>
-            </li>
-        </ul>
-    </div>
 
-    <div id = "anim">
-        <img id="slideshow" src="images/loading.png">
-        <div id="waveDate"></div>
-        <br>
-        <div class = "chart-key c-scale-HTSGW"></div>
-        <!--
-        <a href = "javascript:chgImg(-1)">Previous</a> &nbsp;|&nbsp;
-        <a href = "javascript:auto()">Auto/Stop</a> &nbsp;|&nbsp; 
-        <a href = "javascript:chgImg(1)">Next</a>
-        -->
-    </div>
-</body>
+        var url = window.location.toString();
+        $(document).ready(function(){
+            $('.nav li a').each(function() {
+                var myHref = $(this).attr('href');
+                console.log(myHref);
+                if( url.match( myHref )){
+                    $(this).addClass("selected");
+                }
+            });
+        });
+        </script>
+    </head>
+
+    <body onload=auto()>
+        <div id="container">
+                <img id="logo" src="images/logo.png">
+                <div id="search"></div>
+                <ul class="nav">
+                    <li class="nav_home"><a href="index.htm"></a></li>
+                    <li class="nav_about"><a href="#about"></a></li>
+                    <li class="nav_news"><a href="#news"></a></li>
+                    <li class="nav_media"><a href="#media"></a></li>                
+                    <li class="nav_wavecheck"><a href="wavecheck.htm"></a></li>
+                    <li class="nav_guides"><a href="#guides"></a></li>
+                </ul>
+                <img id="fb" src="images/fb.png">
+
+        </div>
+        <img id="top_bar" src="images/topbar.png">
+        <div id="center">
+            <div id="chart">
+                <div class="control-charttypes">
+                    <ul>
+                        <li>
+                            <a>Swell</a>
+                        </li>
+                        <li>
+                            <a>Period</a>
+                        </li>
+                        <li>
+                            <a>Tide</a>
+                        </li>
+                        <li>
+                            <a>Wind</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="anim">
+                    <img id="slideshow" src="images/loading.png">
+                    <div id="waveDate"></div>
+                    <br>
+                    <!--
+                    <a href = "javascript:chgImg(-1)">Previous</a> &nbsp;|&nbsp;
+                    <a href = "javascript:auto()">Auto/Stop</a> &nbsp;|&nbsp; 
+                    <a href = "javascript:chgImg(1)">Next</a>
+                    -->
+                </div>
+
+                <div class = "chart-key c-scale-HTSGW"></div>
+            </div>
+        </div>
+        <img id="bottom_bar" src="images/bottombar.png">
+    </body>
 </html>

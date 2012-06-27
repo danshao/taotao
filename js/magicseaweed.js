@@ -26,6 +26,6 @@ function getTT() {
 			windImage: "http://chart-a.metcentral.com/gfs/750/61-" + image + "-WMAG.png"
 			});
 	}
-	console.log(wavemap);
+	// console.log(wavemap);
 	return wavemap;
 }

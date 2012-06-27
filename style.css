@@ -17,6 +17,10 @@
     position: relative;
 }
 
+#chart {
+    width: 800px;
+    position: relative;
+}
 #top_bar {
     position: relative;
     width: 1000px;
@@ -62,31 +66,74 @@
     display: block;
     position: absolute;
     background:url('images/nav.png') no-repeat;
-    width: 514px;
-    height: 34px;
+    width: 531px;
+    height: 42px;
     margin: 0;
     padding: 0;
     bottom: 0;
     right: 100px;
 }
-
 .nav li {
     float: left;
     list-style: none;
 }
-
-.nav span {
-    display: none;
-}
-
 .nav a {
-    height: 34px;
+    height: 42px;
     display: block;
 }
-
-.nav.wavecheck {
-    width: 91px;
-    background:url('images/nav.png') -331px 0px no-repeat;
+.nav_home {
+    width: 60px;
+}
+.nav_home a:hover {
+    background:url('images/nav.png') 0px -42px no-repeat;
+}
+.nav_home a.selected {
+    background:url('images/nav.png') 0px -84px no-repeat;
+}
+.nav_about {
+    width: 97px;
+}
+.nav_about a:hover {
+    background:url('images/nav.png') -60px -42px no-repeat;
+}
+.nav_about a.selected {
+    background:url('images/nav.png') -60px -84px no-repeat; 
+}
+.nav_news {
+    width: 73px;
+}
+.nav_news a:hover {
+    background:url('images/nav.png') -157px -42px no-repeat;
+}
+.nav_news a.selected {
+    background:url('images/nav.png') -157px -84px no-repeat;
+}
+.nav_media {
+    width: 84px;
+}
+.nav_media a:hover {
+    background:url('images/nav.png') -230px -42px no-repeat;
+}
+.nav_media a.selected {
+    background:url('images/nav.png') -230px -84px no-repeat;
+}
+.nav_wavecheck {
+    width: 115px;
+}
+.nav_wavecheck a:hover {
+    background:url('images/nav.png') -314px -42px no-repeat;
+}
+.nav_wavecheck a.selected {
+    background:url('images/nav.png') -314px -84px no-repeat;
+}
+.nav_guides {
+    width: 94px;
+}
+.nav_guides a:hover {
+    background:url('images/nav.png') -429px -42px no-repeat;
+}
+.nav_guides a.selected {
+    background:url('images/nav.png') -429px -84px no-repeat;
 }
 
 .control-charttypes {
@@ -125,13 +172,15 @@
 
 .chart-key {
     background:url("images/chartkey.png") no-repeat scroll 0 0 transparent;
-    display: inline-block;
+    
     height: 27px;
     margin-left: 50px;
-    /* text-indent: -9999px; */
+    /* text-indent: -9999px; 
+    display: block;
+        position: relative;
+    */
     width: 760px;
-    background-position: 0 0;
-    margin-top: 10px;
+
 }
 
 .chart-key.c-scale-TMP{
@@ -163,8 +212,9 @@
 }
 
 #waveDate {
+    position: relative;
     font-family: Helvetica, Arial, Lucida, sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 #search {
     background: #fff;
@@ -180,8 +230,9 @@
 }
 
 #anim {
-    width: 750px; height: 460px;
-    /* background-image: url(http://chart-a.metcentral.com/wave/750/61-1339632000-HTSGW.png);
+    width: 750px; 
+    /* height: 460px;
+     background-image: url(http://chart-a.metcentral.com/wave/750/61-1339632000-HTSGW.png);
     background-image: url(http://mail.google.com/mail/im/emotisprites/wink2.png); */
     background-repeat: no-repeat; 
 }

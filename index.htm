@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html>
-<title>Tao Tao 滔滔</title>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="js/orbit-1.2.3.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-    		$('#featured').orbit({
-                animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
-                animationSpeed: 800,                // how fast animtions are
-                timer: true,                        // true or false to have the timer
-                advanceSpeed: 3000, 		        // if timer is enabled, time between transitions 
-                pauseOnHover: false, 		        // if you hover pauses the slider
-                startClockOnMouseOut: false, 	    // if clock should start on MouseOut
-                startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
-                directionalNav: false, 		        // manual advancing directional navs
-                captions: true, 			        // do you want captions?
-                captionAnimation: 'fade', 		    // fade, slideOpen, none
-                captionAnimationSpeed: 800, 	    // if so how quickly should they animate in
-                bullets: true,			            // true or false to activate the bullet navigation
-                bulletThumbs: false,		        // thumbnails for the bullets
-                bulletThumbLocation: '',		    // location from this file where thumbs will be
-                afterSlideChange: function(){} 	    // empty function 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="expires" content="-1">
+        <title>Tao Tao 滔滔</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="js/orbit-1.2.3.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+        		$('#featured').orbit({
+                    animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+                    animationSpeed: 800,                // how fast animtions are
+                    timer: true,                        // true or false to have the timer
+                    advanceSpeed: 3000, 		        // if timer is enabled, time between transitions 
+                    pauseOnHover: false, 		        // if you hover pauses the slider
+                    startClockOnMouseOut: false, 	    // if clock should start on MouseOut
+                    startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
+                    directionalNav: false, 		        // manual advancing directional navs
+                    captions: true, 			        // do you want captions?
+                    captionAnimation: 'fade', 		    // fade, slideOpen, none
+                    captionAnimationSpeed: 800, 	    // if so how quickly should they animate in
+                    bullets: true,			            // true or false to activate the bullet navigation
+                    bulletThumbs: false,		        // thumbnails for the bullets
+                    bulletThumbLocation: '',		    // location from this file where thumbs will be
+                    afterSlideChange: function(){} 	    // empty function 
+                });
+        	});
+
+            var url = window.location.toString();
+            $(document).ready(function(){
+                $('.nav li a').each(function() {
+                    var myHref = $(this).attr('href');
+                    console.log(myHref);
+                    if( url.match( myHref )){
+                        $(this).addClass("selected");
+                    }
+                });
             });
-    	});
-    </script>
-</head>
+        </script>
+    </head>
 
-<body>
-    <div id="container">
-            <img id="logo" src="images/logo.png">
-            <div id="search"></div>
-            <ul class="nav">
-                <li id="home"><a href="#"></a></li>
-                <li id="about"><a href="#"></a></li>
-                <li class="nav wavecheck"><a href="wavecheck.htm"><span>Wave Check</span></a></li>
-            </ul>
-            <img id="fb" src="images/fb.png">
+    <body>
+        <div id="container">
+                <img id="logo" src="images/logo.png">
+                <div id="search"></div>
+                <ul class="nav">
+                    <li class="nav_home"><a href="index.htm"></a></li>
+                    <li class="nav_about"><a href="#about"></a></li>
+                    <li class="nav_news"><a href="#news"></a></li>
+                    <li class="nav_media"><a href="#media"></a></li>                
+                    <li class="nav_wavecheck"><a href="wavecheck.htm"></a></li>
+                    <li class="nav_guides"><a href="#guides"></a></li>
+                </ul>
+                <img id="fb" src="images/fb.png">
 
-    </div>
-    <img id="top_bar" src="images/topbar.png">
-    <div id="center">
-        <div id="featured">
-            <img src="pics/sunsetsexy.jpg" alt="">
-            <img src="pics/surfgirlass.jpg" alt="">
-            <img src="pics/bodyboard.jpg" alt="">
         </div>
-    </div>
-    <img id="bottom_bar" src="images/bottombar.png">
-</body>
+        <img id="top_bar" src="images/topbar.png">
+        <div id="center">
+            <div id="featured">
+                <img src="pics/sunsetsexy.jpg" alt="">
+                <img src="pics/surfgirlass.jpg" alt="">
+                <img src="pics/bodyboard.jpg" alt="">
+            </div>
+        </div>
+        <img id="bottom_bar" src="images/bottombar.png">
+    </body>
 </html>
