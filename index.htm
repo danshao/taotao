@@ -34,7 +34,6 @@
             $(document).ready(function(){
                 $('.nav li a').each(function() {
                     var myHref = $(this).attr('href');
-                    console.log(myHref);
                     if( url.match( myHref )){
                         $(this).addClass("selected");
                     }
