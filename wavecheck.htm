@@ -79,6 +79,7 @@
             }
         }
 
+        // CSS selection for navigation bar
         var url = window.location.toString();
         $(document).ready(function(){
             $('.nav li a').each(function() {
@@ -88,6 +89,7 @@
                 }
             });
         });
+
         </script>
     </head>
 
@@ -111,13 +113,13 @@
                 <div class = "chart-type">
                     <ul>  
                         <li>                            
-                            <a href=javascript:auto(0)>SWELL</a>
+                            <a href="#swell" onclick="auto(0); return false;">SWELL</a>
                         </li>
                         <li>
-                            <a href=javascript:auto(1)>PERIOD</a>
+                            <a href="#period" onclick="auto(1); return false;">PERIOD</a>
                         </li>
                         <li>
-                            <a href=javascript:auto(2)>WIND</a>
+                            <a href="#wind" onclick="auto(2); return false;">WIND</a>
                         </li>
                         <li>
                             <a>TIDE</a>

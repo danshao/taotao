@@ -10,6 +10,7 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>
         <script type="text/javascript">
+            // Orbit slideshow
             $(window).load(function() {
         		$('#featured').orbit({
                     animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
@@ -30,6 +31,7 @@
                 });
         	});
 
+            // CSS selection for navigation bar
             var url = window.location.toString();
             $(document).ready(function(){
                 $('.nav li a').each(function() {
