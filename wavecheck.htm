@@ -18,7 +18,11 @@
         var type = 0;
 
         function chgImg(direction, type_user) {
-            // if (document.images) {
+             if (document.images) {
+                // pre-loading image
+                $("#slideshow").attr("src", "images/loading.png")
+                
+                // animation
                 imgNum = imgNum + direction;
                 if (imgNum > imgLength) {
                     imgNum = 0; 
@@ -26,15 +30,32 @@
                 if (imgNum < 0) { 
                     imgNum = imgLength; 
                 }
-                $("div#waveDate").text(bg[imgNum].date);
+                // conditional statements to use which graph
                 if (type == 0) {
+                    for (i = 0; i < 41; i++) {
+                        preload(bg[i].swellImage);
+                    }
                     $("#slideshow").attr("src", bg[imgNum].swellImage); 
                 } else if (type == 1) {
+                    for (i = 0; i < 41; i++) {
+                        preload(bg[i].periodImage);
+                    }
                     $("#slideshow").attr("src", bg[imgNum].periodImage);                   
                 } else if (type == 2) {
+                    for (i = 0; i < 41; i++) {
+                        preload(bg[i].windImage);
+                    }
                     $("#slideshow").attr("src", bg[imgNum].windImage);                     
                 }
-            // }
+                // change the date 
+                $("div#waveDate").text(bg[imgNum].date);
+             }
+        }
+
+        // preload the images
+        function preload(image) {
+            img = new Image();
+            img.src = image;
         }
 
         function auto(type_user) {

@@ -14,6 +14,11 @@
     font-family: "Helvetica Neue UltraLight";
     src: url('fonts/HelveticaNeue-UltraLight.ttf');
 }
+
+@font-face {
+    font-family: "Helvetica Neue Light";
+    src: url('fonts/HelveticaNeue-Light.ttf');
+}
 #container {
     width: 1000px;
     margin: 50px auto 25px auto;
@@ -229,9 +234,12 @@
 }
 
 #waveDate {
+    text-align: right;
     position: relative;
-    font-family: Helvetica, Arial, Lucida, sans-serif;
-    font-size: 1em;
+    color: #332727;
+    font-family: "Helvetica Neue Light", Arial, Lucida, sans-serif;
+    text-shadow: 0px 0px 0px #000;
+    font-size: 1.15em;
 }
 #search {
     background: #fff;
