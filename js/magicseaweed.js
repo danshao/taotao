@@ -10,11 +10,13 @@ function getTT() {
 	var offset = now.getTimezoneOffset();
 	var wavemap = [];
 	offset = offset / 60;
+	
+	// Convert "now" to unix time
 	now.setHours(-offset);
 	now.setMinutes(0);
 	now.setSeconds(0);
 	now = Math.floor(now.getTime() / 1000);
-	// console.log(now);
+
 	for(var x = 0; x < 41; x++) {
 		image = now + x*3600*3;
 		// Convert unix timestamp back into readable date
