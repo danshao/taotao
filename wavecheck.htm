@@ -38,8 +38,8 @@
         }
 
         function auto(type_user) {
-            if (lock == true && type != type_user) {
-                lock = false;
+            // if (lock == true && type != type_user) {
+            if (type != type_user) {
                 window.clearInterval(run);
                 type = type_user;
                 if (type_user == 1) {
@@ -48,9 +48,13 @@
                 if (type_user == 2) {
                     $("#chartkey").attr("class", "chart-key c-scale-WMAG") 
                 }
-            } else if (lock == false) {
                 run = setInterval("chgImg(1, " + type_user + ")", delay);
-                lock = true;
+                // lock = false;
+            } else {
+                window.clearInterval(run);
+            // } else if (lock == false) {
+                run = setInterval("chgImg(1, " + type + ")", delay);
+               // lock = true;
             }
         }
 
