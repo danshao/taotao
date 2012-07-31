@@ -38,18 +38,20 @@
         }
 
         function auto(type_user) {
-            //if (lock == true) {
-            //    lock = false;
-            //    window.clearInterval(run);
-            //}
-            //else if (lock == false) {
-            //    lock = true;
-            if (type != type_user) {
+            if (lock == true && type != type_user) {
+                lock = false;
                 window.clearInterval(run);
                 type = type_user;
+                if (type_user == 1) {
+                    $("#chartkey").attr("class", "chart-key c-scale-PERPW") 
+                }
+                if (type_user == 2) {
+                    $("#chartkey").attr("class", "chart-key c-scale-WMAG") 
+                }
+            } else if (lock == false) {
+                run = setInterval("chgImg(1, " + type_user + ")", delay);
+                lock = true;
             }
-            run = setInterval("chgImg(1, " + type_user + ")", delay);
-            //}
         }
 
         var url = window.location.toString();
@@ -107,7 +109,7 @@
                     <a href = "javascript:chgImg(1)">Next</a>
                     -->
                 </div>
-                <div class = "chart-key c-scale-HTSGW"></div>
+                <div id = "chartkey" class = "chart-key c-scale-HTSGW"></div>
             </div>
         </div>
         <img id="bottom_bar" src="images/bottombar.png">
