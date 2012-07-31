@@ -15,8 +15,9 @@
         var delay = 500;
         var lock = false;
         var run;
+        var type = 0;
 
-        function chgImg(direction) {
+        function chgImg(direction, type_user) {
             // if (document.images) {
                 imgNum = imgNum + direction;
                 if (imgNum > imgLength) {
@@ -25,27 +26,36 @@
                 if (imgNum < 0) { 
                     imgNum = imgLength; 
                 }
-                $("#slideshow").attr("src", bg[imgNum].swellImage); 
                 $("div#waveDate").text(bg[imgNum].date);
+                if (type == 0) {
+                    $("#slideshow").attr("src", bg[imgNum].swellImage); 
+                } else if (type == 1) {
+                    $("#slideshow").attr("src", bg[imgNum].periodImage);                   
+                } else if (type == 2) {
+                    $("#slideshow").attr("src", bg[imgNum].windImage);                     
+                }
             // }
         }
 
-        function auto() {
-            if (lock == true) {
-                lock = false;
+        function auto(type_user) {
+            //if (lock == true) {
+            //    lock = false;
+            //    window.clearInterval(run);
+            //}
+            //else if (lock == false) {
+            //    lock = true;
+            if (type != type_user) {
                 window.clearInterval(run);
+                type = type_user;
             }
-            else if (lock == false) {
-                lock = true;
-                run = setInterval("chgImg(1)", delay);
-            }
+            run = setInterval("chgImg(1, " + type_user + ")", delay);
+            //}
         }
 
         var url = window.location.toString();
         $(document).ready(function(){
             $('.nav li a').each(function() {
                 var myHref = $(this).attr('href');
-                console.log(myHref);
                 if( url.match( myHref )){
                     $(this).addClass("selected");
                 }
@@ -54,7 +64,7 @@
         </script>
     </head>
 
-    <body onload=auto()>
+    <body onload=auto(0)>
         <div id="container">
                 <img id="logo" src="images/logo.png">
                 <div id="search"></div>
@@ -67,28 +77,26 @@
                     <li class="nav_guides"><a href="#guides"></a></li>
                 </ul>
                 <img id="fb" src="images/fb.png">
-
         </div>
         <img id="top_bar" src="images/topbar.png">
         <div id="center">
             <div id="chart">
-                <div class="control-charttypes">
-                    <ul>
-                        <li>
-                            <a>Swell</a>
+                <div class = "chart-type">
+                    <ul>  
+                        <li>                            
+                            <a href=javascript:auto(0)>SWELL</a>
                         </li>
                         <li>
-                            <a>Period</a>
+                            <a href=javascript:auto(1)>PERIOD</a>
                         </li>
                         <li>
-                            <a>Tide</a>
+                            <a href=javascript:auto(2)>WIND</a>
                         </li>
                         <li>
-                            <a>Wind</a>
-                        </li>
+                            <a>TIDE</a>
+                        </li> 
                     </ul>
                 </div>
-
                 <div id="anim">
                     <img id="slideshow" src="images/loading.png">
                     <div id="waveDate"></div>
@@ -99,7 +107,6 @@
                     <a href = "javascript:chgImg(1)">Next</a>
                     -->
                 </div>
-
                 <div class = "chart-key c-scale-HTSGW"></div>
             </div>
         </div>
