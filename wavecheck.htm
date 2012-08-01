@@ -71,14 +71,16 @@
             if (type != type_user) {
                 window.clearInterval(run);
                 type = type_user;
+                if (type_user == 0) {
+                    $("#chartkey").attr("class", "chart-key c-scale-HTSGW")
+                }
                 if (type_user == 1) {
                     $("#chartkey").attr("class", "chart-key c-scale-PERPW"); 
-                    run = setInterval("chgImg(1, " + type_user + ")", delay);
                 }
                 if (type_user == 2) {
                     $("#chartkey").attr("class", "chart-key c-scale-WMAG"); 
-                    run = setInterval("chgImg(1, " + type_user + ")", delay);
                 }
+                run = setInterval("chgImg(1, " + type_user + ")", delay);
                 // lock = false;
             } else {
                 window.clearInterval(run);
