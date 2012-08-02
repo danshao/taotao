@@ -36,6 +36,16 @@
     position: relative;
 }
 
+#wavecenter {
+    font-family: Helvetica, Arial;
+    font-size: 11px; 
+    background-color: #FFFFFF; 
+    color: #63665F;
+    width: 750px;
+    margin: auto;
+    position: relative;    
+}
+
 #chart {
     width: 800px;
     position: relative;
@@ -252,7 +262,7 @@
 }
 
 #tide_chart {
-    width: 800px;
+    width: 750px;
 }
 
 #waveDate {
